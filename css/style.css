@@ -1,0 +1,131 @@
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+  margin: 0;
+  padding: 0;
+  font-family: "Alexandria", sans-serif;
+}
+
+:root {
+  --primary: #573775;
+  --secondary: #af9384;
+  --bg: #0f0b14;
+  --text: #f5f3f7;
+}
+
+body {
+  position: relative;
+  background: radial-gradient(circle at top, #1b1224, var(--bg));
+  color: var(--text);
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+  background-image: url(../images/bg.png);
+  background-size: cover;
+}
+
+body::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(15, 11, 20, 0.85);
+  z-index: 0;
+}
+
+.container {
+  max-width: 900px;
+  width: 100%;
+  background: linear-gradient(
+    180deg,
+    rgba(87, 55, 117, 0.25),
+    rgba(0, 0, 0, 0.2)
+  );
+  border: 1px solid rgba(175, 147, 132, 0.25);
+  border-radius: 24px;
+  padding: 40px 32px;
+  backdrop-filter: blur(32px);
+}
+
+h1 {
+  font-size: 32px;
+  font-weight: 700;
+  color: var(--text);
+  margin-bottom: 16px;
+}
+
+p {
+  font-size: 16px;
+  line-height: 1.9;
+  margin-bottom: 16px;
+  color: #e9e6ec;
+}
+
+.highlight {
+  color: var(--secondary);
+  font-weight: 600;
+}
+
+.buttons {
+  display: flex;
+  gap: 16px;
+  margin: 32px 0;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.btn {
+  flex: 1;
+  min-width: 220px;
+  text-align: center;
+  border-radius: 16px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: all 0.25s ease;
+  max-width: 250px;
+}
+
+.btn img {
+  width: 90%;
+}
+
+.btn.apple img {
+  width: 80%;
+}
+
+.divider {
+  height: 1px;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    var(--secondary),
+    transparent
+  );
+  margin: 32px 0;
+  opacity: 0.6;
+}
+
+.footer-note {
+  font-size: 14px;
+  color: #d6cedc;
+}
+
+.emoji {
+  font-size: 20px;
+}
+
+@media (max-width: 600px) {
+  h1 {
+    font-size: 26px;
+    line-height: 1.8;
+  }
+  p {
+    font-size: 15px;
+  }
+}
